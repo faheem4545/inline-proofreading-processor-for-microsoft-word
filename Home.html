@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>IPAP</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input, button {
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px 0;
+            padding: 5px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+        }
+
+        #suggestionsContainer {
+            margin-top: 20px;
+            background-color: #eef;
+            border: 1px solid #d3d3d3;
+            padding: 10px;
+        }
+
+        .suggestion-item {
+            margin: 5px 0;
+            padding: 3px;
+            background-color: #d7ebf9;
+            border-left: 3px solid #2b7dbd;
+        }
+    </style>
+</head>
+<body>
+    <h1>IPAP</h1>
+
+    <button id="checkGrammarButton">Check Grammar</button>
+    <button id="paraphraseButton">Paraphrase Selected Text</button>
+
+    <!-- Section for adding ignored patterns -->
+    <section>
+        <h2>Ignored Patterns</h2>
+        <input type="text" id="ignorePatternInput" placeholder="Enter regex pattern" />
+        <button id="addIgnorePatternButton">Add Pattern</button>
+        <div>
+            <ul id="ignorePatternList"></ul>
+        </div>
+    </section>
+
+    <!-- Section for adding special terms -->
+    <section>
+        <h2>Special Terms</h2>
+        <input type="text" id="specialTermInput" placeholder="Enter term" />
+        <button id="addSpecialTermButton">Add Term</button>
+        <div>
+            <ul id="specialTermList"></ul>
+        </div>
+    </section>
+
+    <!-- Section for displaying status messages -->
+    <section id="statusMessages">
+        <h2>Status</h2>
+        <div id="messageContainer"></div>
+    </section>
+
+    <!-- Section for Document Structure Analysis -->
+    <section>
+        <h2>Document Structure Analysis</h2>
+        <button id="analyzeStructureButton">Analyze Document Structure</button>
+    </section>
+
+    <!-- Section for displaying status messages -->
+    <section id="statusMessages">
+        <h2>Status</h2>
+        <div id="messageContainer"></div>
+    </section>
+
+    <section>
+        <h2>Get Suggestions for Selected Text</h2>
+        <button id="suggestionButton">Get Suggestions</button>
+        <div id="suggestionsContainer"></div>
+    </section>
+
+    <div id="errorList"></div>
+
+    <script src="home.js"></script>
+</body>
+</html>
